@@ -1,0 +1,119 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background: url('images/noche.jpg') no-repeat center center fixed;
+    background-size: cover;
+    animation: backgroundAnimation 30s infinite alternate;
+    color: #6a994e;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@keyframes backgroundAnimation {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+.container {
+    margin: 20px;
+}
+
+h1 {
+    color: #FFFFFF; /* Blanco para el título */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Sombra oscura */
+}
+
+p {
+    color: #FFD700; /* Amarillo claro para párrafos */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Sombra oscura */
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #6a994e;
+    border-radius: 5px;
+    width: calc(100% - 22px);
+    max-width: 400px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #f4a261;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+button:hover {
+    background-color: #e76f51;
+}
+
+.hidden {
+    display: none;
+}
+
+#flowerContainer {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-top: 50px;
+}
+
+/* Estilo para las frases */
+.message {
+    position: absolute;
+    font-size: 1.5em;
+    color: #98FB98; /* Verde claro para las frases */
+    font-family: 'Courier New', Courier, monospace;
+    opacity: 0; /* Inicialmente invisible */
+    transition: opacity 1s ease-in-out;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Sombra oscura */
+    z-index: 10; /* Asegura que las frases estén por encima del fondo */
+}
+
+/* Animación de frases */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .message {
+        font-size: 1.2em; /* Ajustar tamaño de fuente en dispositivos más pequeños */
+    }
+}
+
+@media (max-width: 480px) {
+    .message {
+        font-size: 1em; /* Ajustar aún más en dispositivos muy pequeños */
+    }
+}
+
+/* Estilos para el selector de tema */
+.theme-selector {
+    margin: 20px 0;
+}
+
+select {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #6a994e;
+    border-radius: 5px;
+}
